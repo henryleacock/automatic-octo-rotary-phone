@@ -8,3 +8,11 @@ then run:
 `yarn install`
 
 `yarn start`
+
+## Resources
+
+https://www.twilio.com/blog/node-js-proxy-server
+
+https://github.com/DarkCyTic/simple-nodejs-proxy
+
+https://github.com/chimurai/http-proxy-middleware#http-proxy-middleware-options
