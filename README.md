@@ -9,6 +9,10 @@ then run:
 
 `yarn start`
 
+then, for the static file server:
+
+`python3 -m http.server` from the root dir of the project
+
 ## Resources
 
 https://github.com/chimurai/http-proxy-middleware#http-proxy-middleware-options
