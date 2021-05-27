@@ -46466,7 +46466,8 @@ body:not(.ffapp-device) .ps-common--hide-when-not-app {
 }
 
 .component.background-color--light-grey,.component>.background-color--light-grey {
-    background-color: #f0f0f0
+    background-color: #f0f0f0;
+    background-color: purple
 }
 
 .component.background-color--famous-red,.component>.background-color--famous-red {
@@ -46479,7 +46480,8 @@ body:not(.ffapp-device) .ps-common--hide-when-not-app {
 }
 
 .component.background-color--charcoal,.component>.background-color--charcoal {
-    background-color: #333f48
+    background-color: #333f48;
+    background-color: chartreuse
 }
 
 .icon.ps-font-color--dark-grey span,.icon.ps-font-color--dark-grey a,.icon.ps-font-color--dark-grey span::before,.icon.ps-font-color--dark-grey a::before {
