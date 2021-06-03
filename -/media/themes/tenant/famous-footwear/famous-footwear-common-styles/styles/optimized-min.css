@@ -46472,7 +46472,8 @@ body:not(.ffapp-device) .ps-common--hide-when-not-app {
 
 .component.background-color--famous-red,.component>.background-color--famous-red {
     background-color: #d50032;
-    background-color: green
+    background-color: green;
+    background-color: blue
 }
 
 .component.background-color--medium-grey,.component>.background-color--medium-grey {
