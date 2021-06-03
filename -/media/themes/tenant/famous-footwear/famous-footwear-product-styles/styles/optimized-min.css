@@ -29,10 +29,10 @@
     align-items: center;
     text-decoration: none !important;
     background: #333f48;
-    background: pink;
+    background: purple;
     color: #fff;
     text-transform: none;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .caleres-addtocart-component .add-to-cart-btn:active,.caleres-addtocart-component .add-to-cart-btn:hover {
