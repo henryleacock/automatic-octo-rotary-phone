@@ -1,5 +1,6 @@
 - lite version
 - explore netlify upload api
+- specify a request header to avoid bot manager
 
 - switch environments
 - switch sites
