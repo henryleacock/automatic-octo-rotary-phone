@@ -1,4 +1,5 @@
 - lite version
+- explore netlify upload api
 
 - switch environments
 - switch sites
