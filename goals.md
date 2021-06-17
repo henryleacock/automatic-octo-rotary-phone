@@ -1,6 +1,22 @@
 - lite version
-- explore netlify upload api
-- specify a request header to avoid bot manager
+    - point proxy at dev (unoptimized)
+        - start static server within sitecore repo
+
+    - file listener for files to be saved
+    - optimization
+    - file mover (into a directory that could be served up to the proxy site)
+
+
+
+
+
+
+
+- remote proxy server
+    - specify a request header to avoid bot manager
+        - authentication possibly
+    - explore netlify upload api
+    
 
 - switch environments
 - switch sites
