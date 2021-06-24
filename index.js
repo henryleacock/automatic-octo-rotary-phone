@@ -17,7 +17,7 @@ const onProxyRes = function (proxyRes, req, res) {
 
 // proxy middleware options
 const options = {
-    target: 'https://dev.famousfootwear.com', // target host
+    target: 'https://www.famousfootwear.com', // target host
     changeOrigin: true, // needed for virtual hosted sites
     logLevel: 'debug',
     headers: {
@@ -28,7 +28,7 @@ const options = {
 };
 
 const options2 = {
-    target: 'http://localhost:9000', // target host
+    target: 'http://localhost:5000', // target host
     changeOrigin: true, // needed for virtual hosted sites
     logLevel: 'info'
 };
@@ -40,9 +40,9 @@ const exampleProxy2 = createProxyMiddleware(options2);
  
 // mount `exampleProxy` in web server
 const app = express();
-app.use('/-/media/themes/tenant/famous%20footwear/famous%20footwear%20common%20styles/styles', exampleProxy2);
-app.use('/-/media/themes/tenant/famous%20footwear/famous%20footwear%20product%20styles/styles', exampleProxy2);
-app.use('/-/media/base%20themes/caleres%20commerce%20product%20components/scripts/', exampleProxy2);
+app.use('/-/media/themes/tenant/famous-footwear/famous-footwear-common-styles/styles', exampleProxy2);
+app.use('/-/media/themes/tenant/famous-footwear/famous-footwear-product-styles/styles', exampleProxy2);
+app.use('/-/media/base-themes/caleres-commerce-product-components/scripts/', exampleProxy2);
 app.use('*', exampleProxy);
 
 app.listen(3000);
