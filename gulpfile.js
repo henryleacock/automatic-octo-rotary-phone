@@ -37,4 +37,4 @@ exports.commonStyles = commonStyles;
 exports.productStyles = productStyles;
 exports.productScripts = productScripts;
 exports.caleresCommonScripts = caleresCommonScripts;
-exports.optimizeAll = series(commonStyles, productStyles, productScripts);
+exports.optimizeAll = series(commonStyles, productStyles, productScripts, caleresCommonScripts);
