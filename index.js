@@ -43,6 +43,7 @@ const app = express();
 app.use('/-/media/themes/tenant/famous-footwear/famous-footwear-common-styles/styles', exampleProxy2);
 app.use('/-/media/themes/tenant/famous-footwear/famous-footwear-product-styles/styles', exampleProxy2);
 app.use('/-/media/base-themes/caleres-commerce-product-components/scripts/', exampleProxy2);
+app.use('/-/media/base-themes/caleres-common/scripts/', exampleProxy2);
 app.use('*', exampleProxy);
 
 app.listen(3000);
