@@ -10,7 +10,8 @@
     "yargs": "^17.0.1"
   },
   "scripts": {
-    "start": "python3 -m http.server 5000 & node index.js"
+    "start": "node index.js",
+    "static": "python3 -m http.server 5000"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
