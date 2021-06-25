@@ -6,10 +6,11 @@
   "dependencies": {
     "express": "^4.17.1",
     "http-proxy-middleware": "^1.0.5",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "yargs": "^17.0.1"
   },
   "scripts": {
-    "start": "node index.js & python3 -m http.server 5000"
+    "start": "python3 -m http.server 5000 & node index.js"
   },
   "devDependencies": {
     "gulp": "^4.0.2",

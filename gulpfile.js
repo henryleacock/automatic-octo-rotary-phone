@@ -1,17 +1,53 @@
 const { series, src, dest } = require('gulp');
 const concat = require('gulp-concat');
+const argv = require('yargs').argv;
 
+function config(arguments) {
+    // console.log(arguments);
+    var siteConfig = {};
+    switch (true) {
+        case arguments.famous:
+            siteConfig.path = 'famous-footwear';
+            siteConfig.name = 'Famous Footwear';
+            break;
+
+        case arguments.bzees:
+            siteConfig.path = 'bzees';
+            siteConfig.name = 'Bzees';
+            break;
+    
+        case arguments.drs:
+            siteConfig.path = 'dr-scholls-shoes';
+            siteConfig.name = 'Dr Scholls Shoes';
+            break;
+
+        case arguments.franco:
+            siteConfig.path = 'franco-sarto';
+            siteConfig.name = 'Franco Sarto';
+            break;
+    
+        default:
+            siteConfig.path = 'famous-footwear';
+            siteConfig.name = 'Famous Footwear';
+            break;
+    }
+    return siteConfig;
+}
 
 function commonStyles() {
-    return src('../Sitecore_Commerce/Storefront/src/creative-exchange/-/media/Themes/Tenant/Famous Footwear/Famous Footwear Common Styles/styles/common.css')
+    var siteName = config(argv).name;
+    var sitePath = config(argv).path;
+    return src('../Sitecore_Commerce/Storefront/src/creative-exchange/-/media/Themes/Tenant/'+siteName+'/'+siteName+' Common Styles/styles/common.css')
         .pipe(concat('optimized-min.css'))
-        .pipe(dest('./-/media/themes/tenant/famous-footwear/famous-footwear-common-styles/styles/'));
+        .pipe(dest('./-/media/themes/tenant/'+sitePath+'/'+sitePath+'-common-styles/styles/'));
 }
 
 function productStyles() {
-    return src('../Sitecore_Commerce/Storefront/src/creative-exchange/-/media/Themes/Tenant/Famous Footwear/Famous Footwear Product Styles/styles/plp-pdp.css')
+    var siteName = config(argv).name;
+    var sitePath = config(argv).path;
+    return src('../Sitecore_Commerce/Storefront/src/creative-exchange/-/media/Themes/Tenant/'+siteName+'/'+siteName+' Product Styles/styles/plp-pdp.css')
         .pipe(concat('optimized-min.css'))
-        .pipe(dest('./-/media/themes/tenant/famous-footwear/famous-footwear-product-styles/styles/'));
+        .pipe(dest('./-/media/themes/tenant/'+sitePath+'/'+sitePath+'-product-styles/styles/'));
 }
 
 function productScripts() {
@@ -37,4 +73,6 @@ exports.commonStyles = commonStyles;
 exports.productStyles = productStyles;
 exports.productScripts = productScripts;
 exports.caleresCommonScripts = caleresCommonScripts;
+exports.styles = series(commonStyles, productStyles);
+exports.scripts = series(productScripts, caleresCommonScripts);
 exports.optimizeAll = series(commonStyles, productStyles, productScripts, caleresCommonScripts);
