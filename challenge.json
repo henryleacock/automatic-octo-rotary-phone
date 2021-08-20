@@ -1,0 +1,33 @@
+[
+      {
+        brand: "Converse",
+        productName: "Chuck Taylor All Star Hi Top Sneaker",
+        image:
+          "https://www.famousfootwear.com/blob/product-images/20000/69/92/4/69924_right_medium.jpg",
+        price: 59.99,
+        badge: "NEW"
+      },
+      {
+        brand: "Nike",
+        productName: "Lebron Witness V Basketball Shoe",
+        image:
+          "https://www.famousfootwear.com/blob/product-images/20000/50/18/9/50189_right_medium.jpg",
+        price: 99.99
+      },
+      {
+        brand: "Crocs",
+        productName: "Women's Classic Clog",
+        image:
+          "https://www.famousfootwear.com/blob/product-images/20000/99/02/0/99020_right_medium.jpg",
+        price: 49.99,
+        badge: "NEW"
+      },
+      {
+        brand: "Vans",
+        productName: "Women's Asher Slip On Sneaker",
+        image:
+          "https://www.famousfootwear.com/blob/product-images/20000/51/17/3/51173_right_medium.jpg",
+        price: 54.99,
+        badge: "ONLINE ONLY"
+      }
+    ]
